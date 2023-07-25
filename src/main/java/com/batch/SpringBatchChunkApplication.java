@@ -25,6 +25,7 @@ public class SpringBatchChunkApplication {
 		SpringApplication.run(SpringBatchChunkApplication.class, args);
 	}
 
+	// para ejecutar el job al iniciar la aplicación le pasamos los parámetros que necesita el job para ejecutarse
 	@Bean
 	CommandLineRunner init() {
 		return args -> {

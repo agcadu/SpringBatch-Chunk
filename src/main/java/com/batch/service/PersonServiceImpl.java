@@ -14,7 +14,8 @@ public class PersonServiceImpl implements IPersonService{
     private IPersonDao personDao;
 
     @Override
-    public Iterable<Person> saveAll(List<Person> personList) {        return personDao.saveAll(personList);
+    public Iterable<Person> saveAll(List<Person> personList) {
+        return personDao.saveAll(personList);
 
     }
 }

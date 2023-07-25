@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import java.util.concurrent.ThreadPoolExecutor;
 
 @Configuration
 @EnableBatchProcessing
@@ -46,16 +45,17 @@ public class BatchConfig {
     public TaskExecutor taskExecutor(){
         ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
 
-        taskExecutor.setCorePoolSize(1);
-        taskExecutor.setMaxPoolSize(5);
-        taskExecutor.setQueueCapacity(5);
+        taskExecutor.setCorePoolSize(1);//numero de hilos que se van a ejecutar
+        taskExecutor.setMaxPoolSize(5);//maximo de hilos que se van a ejecutar
+        taskExecutor.setQueueCapacity(5);//numero de tareas que se van a ejecutar
         return taskExecutor;
     }
 
+    //Step es un conjunto de tareas que se van a ejecutar en un orden especifico y que se pueden repetir varias veces
     @Bean
     public Step readFile(){
         return stepBuilderFactory.get("readFile")
-                .<Person, Person>chunk(10)
+                .<Person, Person>chunk(10)//chunk es el numero de registros que se van a procesar en cada iteracion
                 .reader(itemReader())
                 .processor(itemProcessor())
                 .writer(itemWriter())
@@ -63,6 +63,7 @@ public class BatchConfig {
                 .build();
     }
 
+    // Job es un conjunto de pasos que se van a ejecutar en un orden especifico y que se ejecutan una sola vez
     @Bean
     public Job job(){
         return jobBuilderFactory.get("readFileWithChunk")

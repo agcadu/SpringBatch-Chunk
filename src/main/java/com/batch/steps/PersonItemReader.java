@@ -25,8 +25,8 @@ public class PersonItemReader extends FlatFileItemReader<Person> {
         DefaultLineMapper lineMapper = new DefaultLineMapper();
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
 
-        String[] columns = new String[]{"name", "lastName", "age"};
-        int[] indexFields = new int[]{0, 1, 2};
+        String[] columns = new String[]{"name", "lastName", "age", "email", "phone"};
+        int[] indexFields = new int[]{0, 1, 2, 3, 4};
 
         lineTokenizer.setNames(columns);
         lineTokenizer.setIncludedFields(indexFields);
