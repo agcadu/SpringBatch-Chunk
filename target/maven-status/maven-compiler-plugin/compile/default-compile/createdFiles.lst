@@ -1,0 +1,9 @@
+com\batch\service\PersonServiceImpl.class
+com\batch\persistence\IPersonDao.class
+com\batch\service\IPersonService.class
+com\batch\steps\PersonItemProcessor.class
+com\batch\steps\PersonItemReader.class
+com\batch\config\BatchConfig.class
+com\batch\entities\Person.class
+com\batch\steps\PersonItemWriter.class
+com\batch\SpringBatchChunkApplication.class

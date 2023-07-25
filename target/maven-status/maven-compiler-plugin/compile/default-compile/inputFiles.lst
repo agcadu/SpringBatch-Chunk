@@ -1,0 +1,9 @@
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\config\BatchConfig.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\entities\Person.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\SpringBatchChunkApplication.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\steps\PersonItemReader.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\service\PersonServiceImpl.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\persistence\IPersonDao.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\service\IPersonService.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\steps\PersonItemProcessor.java
+D:\cursos\SpringBatchChunk\src\main\java\com\batch\steps\PersonItemWriter.java
